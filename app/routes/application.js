@@ -11,6 +11,7 @@ export default class ApplicationRoute extends Route {
       this.store.peekAll('my-model').length === 0
     );
     let model = this.store.createRecord('my-model');
+    this.store.peekAll('my-model').length;
     model.unloadRecord();
     assert(
       'There should be 0 models after unloadRecord',
